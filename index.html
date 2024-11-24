@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Menu Mobile</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="desktop-header">
+                <img id="logo" src="img/house-hand.png" alt="Logo" height="auto">
+                <ul class="nav-itens nav-items-desktop">
+                    <li>Home</li>
+                    <li>Contato</li>
+                    <li>Sobre</li>
+                </ul>
+                <img id="open-menu" src="img/list.svg" alt="">
+                <!-- Mobile Menu -->
+                <ul id="menu-mobile" class="nav-itens nav-mobile">
+                    <li>
+                        <img id="close-menu" src="img/x.svg" alt="mobile menu icon">
+                    </li>
+                    <li>Home</li>
+                    <li>Contato</li>
+                    <li>Sobre</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main></main>
+    <footer class="footer">
+        <p>Developed by <a href="#">Luis Da Silva</a></p>
+    </footer>
+    <script>
+        const openMenu = document.getElementById('open-menu');
+        const menu = document.getElementById('menu-mobile');
+        const closeMenu = document.getElementById('close-menu');
+
+        openMenu.addEventListener('click', () => {
+            menu.classList.add('active');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            menu.classList.remove('active');
+        })
+    </script>
+</body>
+
+</html>
